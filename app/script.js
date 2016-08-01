@@ -1,16 +1,67 @@
-var app=angular.module('single-page-app',['ngRoute']);
+var app = angular.module('myApp', ['ngRoute'] );
+
 app.config(function($routeProvider){
       $routeProvider
-          .when('/',{
-                templateUrl: 'home.html'
-          })
-          .when('/about',{
-                templateUrl: 'about.html'
-          });
-});
-app.controller('cfgController',function($scope){
+      .when('/', {
+        templateUrl : 'home.html',
+        controller  : 'HomeCtrl'
+      })
 
-    /*
-    Here you can handle controller for specific route as well.
-    */
+      .when('/about', {
+        templateUrl : 'about.html',
+        controller  : 'AboutCtrl'
+      })
+
+      .when('/projects', {
+        templateUrl : 'projects.html',
+        controller  : 'ProjectsCtrl'
+      })
+
+      .when('/blog', {
+        templateUrl : 'blog.html',
+        controller  : 'BlogCtrl'
+      })
+
+      .when('/contact-me', {
+        templateUrl : 'contact-me.html',
+        controller  : 'Contact-MeCtrl'
+      })
+
+      .otherwise({redirectTo: '/'});
+});
+
+
+//Home Page Controller
+app.controller('HomeCtrl',function($scope){
+    $scope.pageClass = 'page-home';
+});
+
+
+
+//About Page Controller
+app.controller('AboutCtrl',function($scope){
+    $scope.pageClass = 'page-about';
+});
+
+
+
+//Projects Page Controller
+app.controller('ProjectsCtrl',function($scope){
+    $scope.pageClass = 'page-projects';
+});
+
+
+
+//Blog Page Controller
+
+app.controller('BlogCtrl',function($scope){
+    $scope.pageClass = 'page-blog';
+});
+
+
+
+//Contact Me Page Controller
+
+app.controller('Contact-MeCtrl',function($scope){
+    $scope.pageClass = 'page-contact';
 });
