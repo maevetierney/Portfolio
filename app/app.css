@@ -1,5 +1,4 @@
 /* app scss stylesheet */
-@import "bourbon/bourbon";
 
 .scroll-on-page {
   $base-line-height: 1.5em !default;
