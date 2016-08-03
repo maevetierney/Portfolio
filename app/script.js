@@ -67,3 +67,11 @@ app.controller('BlogCtrl',function($scope){
 app.controller('Contact-MeCtrl',function($scope){
     $scope.pageClass = 'page-contact';
 });
+
+
+// img parallax
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+      $('main-parallax-container.parallax').parallax();
+    });
