@@ -1,9 +1,69 @@
-
-
-.parallax-container {
-    height: 200px
+img {
+    width: 100%;
 }
 
-.home {
-    opacity: .3;
+nav.nav-wrapper {
+    background-color: white;
+}
+
+a.scroll-on-page-link {
+    color: black;
+}
+
+footer.page-footer {
+    background-color: white;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+h5.white-text {
+    color: black;
+}
+
+div.container {
+    color: black;
+}
+
+img.imgme {
+    width: 200px;
+    float: left;
+    padding-top: 2%;
+    padding-left: 3%
+}
+
+div#projects {
+    clear: both;
+}
+
+div#about {
+    padding-top: 3%;
+    padding-left: 20%;
+    padding-bottom: 6%;
+}
+
+h4#projects {
+    text-align: center;
+}
+
+h4#skills {
+    text-align: center;
+}
+
+h4#contact-me {
+    text-align: center;
+}
+
+div#Skills{
+    padding-top: 2%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+button.btn.waves-effect.waves-light {
+    background-color: black;
+    float: right;
+}
+
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }

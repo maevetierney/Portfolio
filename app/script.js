@@ -62,16 +62,19 @@ app.controller('BlogCtrl',function($scope){
 
 
 
-//Contact Me Page Controller
+function ContactCtrl($scope, $http) {
+  $scope.success = false;
+  $scope.httpError = false;
 
-app.controller('Contact-MeCtrl',function($scope){
-    $scope.pageClass = 'page-contact';
-});
-
-
-// img parallax
-
-    $(document).ready(function(){
-      $('.parallax').parallax();
-      $('main-parallax-container.parallax').parallax();
-    });
+  $scope.send = function() {
+    var job = { job: { klass: 'msg', args: [$scope.msg]}};
+    $http.post('/contact',job).
+      success(function(data){
+        $scope.success = true;
+        $scope.msg = {};
+      }).
+      error(function(data){
+        $scope.httpError = true;
+      });
+  }
+}
