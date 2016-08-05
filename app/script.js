@@ -4,7 +4,7 @@ app.config(function($routeProvider){
       $routeProvider
       .when('/', {
         templateUrl : 'home.html',
-        controller  : 'HomeCtrl'
+        controller  : 'MainCtrl'
       })
 
       .when('/about', {
@@ -36,7 +36,9 @@ app.controller('HomeCtrl',function($scope){
     $scope.pageClass = 'page-home';
 });
 
-
+app.controller('MainCtrl',function($scope){
+    $scope.pageClass = 'main-ctrl works';
+});
 
 //About Page Controller
 app.controller('AboutCtrl',function($scope){
@@ -47,7 +49,7 @@ app.controller('AboutCtrl',function($scope){
 
 //Projects Page Controller
 app.controller('ProjectsCtrl',function($scope){
-    $scope.pageClass = 'page-projects';
+    this.pageClass = 'page-projects';
 });
 
 
@@ -60,8 +62,19 @@ app.controller('BlogCtrl',function($scope){
 
 
 
-//Contact Me Page Controller
+function ContactCtrl($scope, $http) {
+  $scope.success = false;
+  $scope.httpError = false;
 
-app.controller('Contact-MeCtrl',function($scope){
-    $scope.pageClass = 'page-contact';
-});
+  $scope.send = function() {
+    var job = { job: { klass: 'msg', args: [$scope.msg]}};
+    $http.post('/contact',job).
+      success(function(data){
+        $scope.success = true;
+        $scope.msg = {};
+      }).
+      error(function(data){
+        $scope.httpError = true;
+      });
+  }
+}

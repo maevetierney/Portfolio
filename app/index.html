@@ -3,50 +3,234 @@
 <head>
   <meta charset="UTF-8">
   <title>Maeve Tierney's Portfolio</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js">   </script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.17/angular-animate.min.js"></script>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import jQuery before materialize.js -->
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="app.css">
   <script src="script.js"></script>
 </head>
+
 <body ng-app="myApp">
-
-
-      <div class="page {{ pageClass }}" ></div>
-
-          <div class="scroll-on-page">
+<div class="scroll-on-page">
+    <div ng-controller="NavCtrl">
+      <div class="navbar-fixed">
+        <nav class="nav-wrapper">
               <aside id="scroll-on-page-top">
-                  <a class="scroll-on-page-link" href="#home">Home</a></a></a>
-                  <a class="scroll-on-page-link" href="#about">About Me</a>
-                  <a class="scroll-on-page-link" href="#projects">Projects</a>
-                  <a class="scroll-on-page-link" href="#blog">Blog</a>
-                  <a class="scroll-on-page-link" href="#contact-me">Contact Me</a>
+                  <ul class="right hide-on-med-and-down">
+                     <li><a class="scroll-on-page-link" href="#about">About Me</a></li>
+                     <li><a class="scroll-on-page-link" href="#projects">Projects</a></li>
+                     <li><a class="scroll-on-page-link" href="#skills">Skills</a></li>
+                     <li><a class="scroll-on-page-link" href="#contact-me">Contact Me</a></li>
               </aside>
-
-              <article>
-                  <section>
-                      <h4 id="home">Home</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-                    </section>
-                    <section>
-                        <h4 id="about">About Me</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-                    </section>
-                    <section>
-                        <h4 id="projects">Projects</h4>
-                        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-                    </section>
-                    <section>
-                        <h4 id="blog">Blog</h4>
-                        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-                    </section>
-                    <section>
-                        <h4 id="contact-me">Contact Me</h4>
-                        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-                        <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
-                    </section>
-                </article>
+          </nav>
       </div>
+
+          <div><img class="img" src="images/Draft 3- Welcome.png"></div>
+
+          <div><img class="img" src="images/Draft 2- WeLCOME Full Stack Web Developer.png"></div>
+
+          <div class="me-container">
+                <img class="imgme" src="images/IMG_4916.jpg">
+          </div>
+        <div id="about">
+            <h4 id="about">About Me</h4>
+                <span class="black-text">
+                    I am a Full-Stack Developer located in San Diego, California.
+
+                    I love understanding different peoples' and different culture's perspectives. As a developer, I think that technology is a form of art. It is our response to turmoil and corruption. I seek to make the world a better place through innovation that can make all of us equal and all of our voices be heard.
+                    <br/> </br>
+
+                    I am currently seeking a full-time position as a Full Stack, Front End or Back End Developer.
+                </span>
+      </div>
+
+      <div id="Projects">
+          <h4 id="projects">Projects</h4>
+          <div class="card" id="one" style="float: left; width: 550px; height: 350px;">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/700379-original.png">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Final Project at Dev Bootcamp
+                    <i class="material-icons   right">more_vert</i>
+                </span>
+                <p><a href="https://github.com/JDKinser/NeverNude">Github</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Final Project at Dev Bootcamp<i class="material-icons right">close</i></span>
+                <p>
+                    Presented with a real-world problem, and created the solution of a virtual closet mobile application that transforms the stressful task of striving to be fashion forward while managing your time and your wardrobe. Co-created with three other students using team building skills, git-workflow and standup organization. Constructed a flexible and stable Rails 5 (that was released that day) RESTful API for our back end to send JSON data while we experimented with various mobile fronted platforms. Demonstrated a growth experience by learning Angular.js in one day to construct an interactive front end using the platform Ionic. Responsible for integrating the mobile device's camera into the application to cultivate the user experience of inputting the items in their wardrobe, guaranteeing an immediate and interactive experience. Presented our app in front of 50 people, including 23 employers to demo our problem, our solution and our application in a professional way. Deployed our application using Heroku, managed our database using Postgres and AWS S3.
+
+                    Backend Developer, Camera Feature Developer , Javascript, Ionic Framework, Cordova
+                </p>
+            </div>
+         </div>
+        <div class="card" id="two" style="float: right; width: 550px; height: 350px;">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="/images/20141210_dbcsf_169_l_slide-6c0f00c3ff71eec42ce448854c367a80fbe404aa-s900-c85.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Client Project | DBC Shuffle <i class="material-icons right">more_vert</i></span>
+            <p><a href="https://github.com/mlaurel/dbc-shuffle">Github</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Client Project | DBC Shuffle<i class="material-icons right">close</i></span>
+            <p>Received a request for an application from Dev Bootcamp to generate weekly groups for students based on previous interaction to increase perspective and collaboration in groups and minimize repetition of pairing.Designed an algorithm that consisted of single responsibility methods in a RESTful Rails back end. Integrated the backend into a Rails front end using CSS and HTML in one day, promising the client an admin access feature option, secure user authentication using Devise and tokens, and giving the student public access to view their assigned groups for the week. Took advantage of git workflow to organize our features, deployed our app using multiple servers on Heroku, and managed our databases with PostgreSQL.
+
+            Frontend Developer, Co-creator of Algorithim, Ruby on Rails, Ruby on Rails 5, HTML5
+        </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Skills" style="clear: both;">
+          <h4 id="skills">Skills</h4>
+          <div class="chip">
+              Ruby
+          </div>
+          <div class="chip">
+              Ruby on Rails
+          </div>
+          <div class="chip">
+              JavaScript
+          </div>
+          <div class="chip">
+              SQL
+          </div>
+          <div class="chip">
+              AngularJS
+          </div>
+          <div class="chip">
+              PostgreSQL
+          </div>
+          <div class="chip">
+              SQLite
+          </div>
+          <div class="chip">
+              JQuery
+          </div>
+          <div class="chip">
+              AJAX
+          </div>
+          <div class="chip">
+              RSPEC
+          </div>
+          <div class="chip">
+              AWS
+          </div>
+          <div class="chip">
+              Heroku
+          </div>
+          <div class="chip">
+              Git
+          </div>
+          <div class="chip">
+              HTML/CSS
+          </div>
+          <div class="chip">
+              Ionic
+          </div>
+          <div class="chip">
+             API Development
+          </div>
+          <div class="chip">
+              Backbone.js
+          </div>
+          <div class="chip">
+              TDD
+          </div>
+          <div class="chip">
+              SASS
+          </div>
+          <div class="chip">
+              Bourbon, Neat...
+          </div>
+          <div class="chip">
+              PhoneGap/Cordova
+          </div>
+          <div class="chip">
+              Ionic
+          </div>
+
+      </div>
+
+
+      <div id="contact-me">
+          <h4 id="contact-me">Contact Me</h4>
+          <div class="row">
+          <form class="col s12">
+            <div class="row">
+             <div class="input-field col s6">
+               <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+               <label for="first_name">First Name</label>
+             </div>
+             <div class="input-field col s6">
+               <input id="last_name" type="text" class="validate">
+               <label for="last_name">Last Name</label>
+             </div>
+            </div>
+
+
+            <div class="row">
+             <div class="input-field col s12">
+               <i class="material-icons prefix">email</i>
+               <input id="email" type="email" class="validate">
+               <label for="email">Email</label>
+             </div>
+            </div>
+            <div class="row">
+             <div class="input-field col s12">
+               <i class="material-icons prefix">mode_edit</i>
+               <input id="message" type="text" class="validate">
+               <label for="email">Message</label>
+             </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+        </div>
+    </div>
+
+    <!-- <div class="containter-buttons">
+            <a id="Maeve Tierney-Linkedin" ng-href="{{https://www.linkedin.com/in/maeve-tierney-7254208bContact Info}}"><img src="images/default-share.png"/></a>
+    </div> -->
+
+    <div><img class="img" src="images/“Others have seen what is and asked why..png"></div>
+
+    <footer class="page-footer">
+         <div class="container">
+           <div class="row">
+             <div class="col l6 s12">
+               <h5 class="black-text">Thanks For Stopping By!</h5>
+               <p class="black-text text-lighten-4">Come back soon.</p>
+             </div>
+             <div class="col l4 offset-l2 s12">
+               <h5 class="black-text">In Case You Missed It</h5>
+               <ul>
+                 <li><a class="black-text text-lighten-3" href="#about">About Me</a></li>
+                 <li><a class="black-text text-lighten-3" href="#projects">Projects</a></li>
+                 <li><a class="black-text text-lighten-3" href="#skills">Skills</a></li>
+                 <li><a class="black-text text-lighten-3" href="#contact-me">Contact Me</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+         <div class="footer-copyright">
+           <div class="container">
+           Created by Maeve Tierney © 2016 Copyright
+           <a class="black-text text-lighten-4 right" href="#home">Back to Top </a>
+           </div>
+         </div>
+       </footer>
   </div>
+
 </body>
-</html>
+        </html>
