@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "My portfolio",
-  "repository": "https://github.com/maevetierney/portfolio",
+  "repository": "https://github.com/maevetierney/Portfolio",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
