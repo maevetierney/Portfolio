@@ -1,9 +1,9 @@
 {
-  "name": "maeve-tierney-portfolio",
+  "name": "agile-woodland-27768",
   "private": true,
   "version": "1.0.0",
   "description": "My portfolio",
-  "repository": "https://github.com/maevetierney/Portfolio",
+  "repository": "https://git.heroku.com/agile-woodland-27768",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
