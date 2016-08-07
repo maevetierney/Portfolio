@@ -1,1 +1,5 @@
 web: node server.js
+
+
+--figure out dynos
+--figure out Procfile specificty and location is correct? 
