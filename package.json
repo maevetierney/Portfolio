@@ -17,7 +17,7 @@
     "protractor": "^3.2.2"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "prestart": "npm install",
     "start": "node server.js",
     "pretest": "npm install",
@@ -34,9 +34,10 @@
     "npm": "2.15.8"
   },
   "dependencies": {
-    "foobar": "^1.1.0",
-    "grunt-cli": "^1.2.0",
+    "bower": "^1.7.9",
     "ejs": "~1.0.0",
-    "express": "~4.9.8"
-}
+    "express": "^4.9.8",
+    "foobar": "^1.1.0",
+    "grunt-cli": "^1.2.0"
+  }
 }
