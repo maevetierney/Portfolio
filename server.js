@@ -5,6 +5,7 @@ var app = express();
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8080;
 
+var path = app.use(express.static('app'));
 
 // set the view engine to ejs
 app.engine('html', require('ejs').renderFile);
@@ -16,7 +17,7 @@ app.get('/', function(req, res) {
     res.render('index.html');
 });
 
-app.use(express.static(path.join(__dirname, 'server')));
+app.use(express.static(__dirname, 'server'));
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
