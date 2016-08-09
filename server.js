@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+process.env.PWD = process.cwd()
+
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -17,7 +19,7 @@ app.get('/', function(req, res) {
     res.render('index.html');
 });
 
-app.use(express.static(__dirname, 'server'));
+app.use(express.static(process.env.PWD, 'server'));
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
