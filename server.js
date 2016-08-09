@@ -17,7 +17,6 @@ app.get('/', function(req, res) {
     res.render('index.html');
 });
 
-app.use(express.static(process.env.PWD, 'server'));
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
